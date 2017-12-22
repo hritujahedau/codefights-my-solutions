@@ -1,0 +1,19 @@
+def firstDuplicate(a):
+    lastrange = 1
+    for i in range(len(a)):
+        if (abs(a[i]) == len(a)):
+            if(lastrange>0):
+                lastrange = -lastrange
+            else:
+                print (abs(a[i]))
+                return (abs(a[i]))
+        elif(a[abs(a[i])] > 0) :
+            a[abs(a[i])] = -a[abs(a[i])]
+        else:
+            print (abs(a[i] ) )
+            return (abs(a[i] ) )
+            
+    
+    print (-1)
+    return (-1)
+
